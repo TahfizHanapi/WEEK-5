@@ -1,0 +1,51 @@
+package assignment;
+
+import java.util.Scanner;
+
+public class Car {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double interest;
+		int year;
+		double loan;
+		double total;
+		double month;
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("Enter the yearly interest rate: ");
+		interest = scan.nextDouble();
+		
+		System.out.print("Enter the number of years:  ");
+		year = scan.nextInt();
+		
+		System.out.print("Enter the loan amount: $ ");
+		loan = scan.nextDouble();
+		
+		month = (interest / 100) * loan;
+		
+		total = month * 12 * year;
+		
+		System.out.printf("The mothly payment is $ %.2f ",month);
+		
+		System.out.println();
+		
+		System.out.printf("The Total payment is $ %.2f",total);
+		
+		
+			
+
+	}
+
+}
+
+
+
+OUTPUT:
+
+Enter the yearly interest rate: 3.5
+Enter the number of years:  5
+Enter the loan amount: $ 3000
+The mothly payment is $ 105.00 
+The Total payment is $ 6300.00
