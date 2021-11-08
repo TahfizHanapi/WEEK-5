@@ -1,0 +1,92 @@
+package assignment;
+
+import java.util.Scanner;
+
+public class C_MARTS {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int item;
+		double price1;
+		double price2;
+		double price3;
+		double total1;
+		double total2;
+		double total3;
+		double sum;
+		double disc;
+		double pay;
+		int q1;
+		int q2;
+		int q3;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter the number of item: ");
+		item = sc.nextInt();
+		
+		System.out.print("Enter the price of first item: RM ");
+		price1 = sc.nextDouble();
+		
+		System.out.print("Enter the quantity of first item: ");
+		q1 = sc.nextInt();
+		
+		total1 = price1 * q1;
+		
+		System.out.print("\nEnter the price of second item: RM ");
+		price2 = sc.nextInt();
+		
+		System.out.print("Enter the quantity of second item: ");
+		q2 = sc.nextInt();
+		
+		total2 = price2 * q2;
+		
+		System.out.print("\nEnter the price of third item: RM ");
+		price3 = sc.nextDouble();
+		
+		System.out.print("Enter the quantity of third item: ");
+		q3 = sc.nextInt();
+		
+		total3 = price3 * q3;
+		
+		sum = total1 + total2 + total3;
+		
+		System.out.println("\nTotal price: RM " + sum);
+		
+		if (sum > 100) {
+		   disc = sum * (20 / 100);
+		}
+		
+		if (sum < 100) {
+			disc = sum * (10 / 100);
+		}
+		
+		disc = sum * (20/100);
+		
+		
+		 pay = sum - disc; 
+		
+		System.out.println("Discount recieved: RM" + disc);
+		System.out.print("Price to be paid: RM" + pay);
+				
+		
+	}
+
+}
+
+
+OUTPUT:
+
+Enter the number of item: 3
+Enter the price of first item: RM 150
+Enter the quantity of first item: 2
+
+Enter the price of second item: RM 50
+Enter the quantity of second item: 3
+
+Enter the price of third item: RM 30
+Enter the quantity of third item: 1
+
+Total price: RM 480.0
+Discount recieved: RM0.0
+Price to be paid: RM480.0
